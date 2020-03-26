@@ -17,6 +17,11 @@ public class PhoneResource {
 
     private PhoneService service;
 
+    @GetMapping("/personid/{personId}")
+    public ResponseEntity<List<Phone>> getPhoneByPersonId(@PathVariable Long personId) {
+        return new ResponseEntity<>(service.getPhoneByPersonId(personId), HttpStatus.OK);
+    }
+
     @GetMapping("/number/{number}")
     public ResponseEntity<Phone> getPhoneByNumber(@PathVariable Long number) {
         return new ResponseEntity<>(service.getPhoneByNumber(number), HttpStatus.OK);

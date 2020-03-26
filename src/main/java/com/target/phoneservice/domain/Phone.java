@@ -28,4 +28,7 @@ public class Phone implements Serializable {
 
     @Column(name = "area_code", columnDefinition = "VARCHAR", length = 3, nullable = false)
     private String areaCode;
+
+    @Column(name = "person_id", columnDefinition = "BIGINT")
+    private Long personId;
 }

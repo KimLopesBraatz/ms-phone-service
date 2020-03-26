@@ -17,6 +17,10 @@ public class PhoneService {
         return repository.findByNumber(number);
     }
 
+    public List<Phone> getPhoneByPersonId(Long personId) {
+        return repository.findByPersonId(personId);
+    }
+
     public List<Phone> save(List<Phone> phoneList) {
         return repository.saveAll(phoneList);
     }
